@@ -17,6 +17,9 @@ Framework Laravel + Bibliotecas para desenvolvimento de aplicação.
 ### Instalação
 - Clonar o projeto;
 - Na pasta do projeto executar o comando `composer install`;
+- Copiar arquivo `.env.example` para `.env`;
+- Criar banco de dados e configurar arquivo `.env`;
+- Executar migração do banco de dados `php artisan migrate`;
 - Para iniciar o servidor `php artisan serve`.
 
 ---
@@ -28,4 +31,7 @@ Framework Laravel + Libraries for develop application.
 ### Instalation
 - Clone repository;
 - Inside folder, execute `composer install`;
+- Copy file `.env.example` to `.env`;
+- Create database and configure `.env` file;
+- Migrate database `php artisan migrate`;
 - Initiate server `php artisan serve`.
