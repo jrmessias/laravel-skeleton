@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('login/social/{provider}', ['uses' => 'Auth\LoginController@redirectToProvider', 'as' => 'login.social']);
 Route::get('login/social/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+
+Route::resource('nerds', 'NerdController');
