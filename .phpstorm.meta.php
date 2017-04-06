@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-04-05.
+    * Generated on 2017-04-06.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -44,12 +44,12 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
+            'Laracasts\Flash\SessionStore' instanceof \Laracasts\Flash\LaravelSessionStore,
+            'flash' instanceof \Laracasts\Flash\FlashNotifier,
             'GrahamCampbell\Exceptions\ExceptionIdentifier' instanceof \GrahamCampbell\Exceptions\ExceptionIdentifier,
             'GrahamCampbell\Exceptions\ExceptionInfo' instanceof \GrahamCampbell\Exceptions\ExceptionInfo,
             'GrahamCampbell\Exceptions\Displayers\HtmlDisplayer' instanceof \GrahamCampbell\Exceptions\Displayers\HtmlDisplayer,
             'GrahamCampbell\Exceptions\Filters\VerboseFilter' instanceof \GrahamCampbell\Exceptions\Filters\VerboseFilter,
-            'Laracasts\Flash\SessionStore' instanceof \Laracasts\Flash\LaravelSessionStore,
-            'flash' instanceof \Laracasts\Flash\FlashNotifier,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,
@@ -136,6 +136,7 @@ namespace PHPSTORM_META {
             'translator' instanceof \Illuminate\Translation\Translator,
             'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'command.tinker' instanceof \Laravel\Tinker\Console\TinkerCommand,
+            'Laravel\Socialite\Contracts\Factory' instanceof \Laravel\Socialite\SocialiteManager,
         ],
         \Illuminate\Contracts\Container\Container::make('') => [
             '' == '@',
@@ -172,12 +173,12 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
+            'Laracasts\Flash\SessionStore' instanceof \Laracasts\Flash\LaravelSessionStore,
+            'flash' instanceof \Laracasts\Flash\FlashNotifier,
             'GrahamCampbell\Exceptions\ExceptionIdentifier' instanceof \GrahamCampbell\Exceptions\ExceptionIdentifier,
             'GrahamCampbell\Exceptions\ExceptionInfo' instanceof \GrahamCampbell\Exceptions\ExceptionInfo,
             'GrahamCampbell\Exceptions\Displayers\HtmlDisplayer' instanceof \GrahamCampbell\Exceptions\Displayers\HtmlDisplayer,
             'GrahamCampbell\Exceptions\Filters\VerboseFilter' instanceof \GrahamCampbell\Exceptions\Filters\VerboseFilter,
-            'Laracasts\Flash\SessionStore' instanceof \Laracasts\Flash\LaravelSessionStore,
-            'flash' instanceof \Laracasts\Flash\FlashNotifier,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,
@@ -264,6 +265,7 @@ namespace PHPSTORM_META {
             'translator' instanceof \Illuminate\Translation\Translator,
             'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'command.tinker' instanceof \Laravel\Tinker\Console\TinkerCommand,
+            'Laravel\Socialite\Contracts\Factory' instanceof \Laravel\Socialite\SocialiteManager,
         ],
         \App::make('') => [
             '' == '@',
@@ -300,12 +302,12 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
+            'Laracasts\Flash\SessionStore' instanceof \Laracasts\Flash\LaravelSessionStore,
+            'flash' instanceof \Laracasts\Flash\FlashNotifier,
             'GrahamCampbell\Exceptions\ExceptionIdentifier' instanceof \GrahamCampbell\Exceptions\ExceptionIdentifier,
             'GrahamCampbell\Exceptions\ExceptionInfo' instanceof \GrahamCampbell\Exceptions\ExceptionInfo,
             'GrahamCampbell\Exceptions\Displayers\HtmlDisplayer' instanceof \GrahamCampbell\Exceptions\Displayers\HtmlDisplayer,
             'GrahamCampbell\Exceptions\Filters\VerboseFilter' instanceof \GrahamCampbell\Exceptions\Filters\VerboseFilter,
-            'Laracasts\Flash\SessionStore' instanceof \Laracasts\Flash\LaravelSessionStore,
-            'flash' instanceof \Laracasts\Flash\FlashNotifier,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,
@@ -392,6 +394,7 @@ namespace PHPSTORM_META {
             'translator' instanceof \Illuminate\Translation\Translator,
             'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'command.tinker' instanceof \Laravel\Tinker\Console\TinkerCommand,
+            'Laravel\Socialite\Contracts\Factory' instanceof \Laravel\Socialite\SocialiteManager,
         ],
         \app('') => [
             '' == '@',
@@ -428,12 +431,12 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
+            'Laracasts\Flash\SessionStore' instanceof \Laracasts\Flash\LaravelSessionStore,
+            'flash' instanceof \Laracasts\Flash\FlashNotifier,
             'GrahamCampbell\Exceptions\ExceptionIdentifier' instanceof \GrahamCampbell\Exceptions\ExceptionIdentifier,
             'GrahamCampbell\Exceptions\ExceptionInfo' instanceof \GrahamCampbell\Exceptions\ExceptionInfo,
             'GrahamCampbell\Exceptions\Displayers\HtmlDisplayer' instanceof \GrahamCampbell\Exceptions\Displayers\HtmlDisplayer,
             'GrahamCampbell\Exceptions\Filters\VerboseFilter' instanceof \GrahamCampbell\Exceptions\Filters\VerboseFilter,
-            'Laracasts\Flash\SessionStore' instanceof \Laracasts\Flash\LaravelSessionStore,
-            'flash' instanceof \Laracasts\Flash\FlashNotifier,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'cache' instanceof \Illuminate\Cache\CacheManager,
             'cache.store' instanceof \Illuminate\Cache\Repository,
@@ -520,6 +523,7 @@ namespace PHPSTORM_META {
             'translator' instanceof \Illuminate\Translation\Translator,
             'validation.presence' instanceof \Illuminate\Validation\DatabasePresenceVerifier,
             'command.tinker' instanceof \Laravel\Tinker\Console\TinkerCommand,
+            'Laravel\Socialite\Contracts\Factory' instanceof \Laravel\Socialite\SocialiteManager,
         ],
     ];
 }

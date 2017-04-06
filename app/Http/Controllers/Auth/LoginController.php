@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Validator;
-use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 /**
  * 
  */
-use Laravel\Socialite\Facades\Socialite;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 use App\User;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Contracts\Provider;
+use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller {
     /*
@@ -42,27 +42,83 @@ use AuthenticatesUsers;
         $this->middleware('guest', ['except' => 'logout']);
     }
 
+    /**
+     * 
+     * @param Provider $provider
+     */
     public function redirectToProvider($provider) {
         return Socialite::driver($provider)->redirect();
     }
 
+    /**
+     * 
+     * @param Provider $provider
+     */
     public function handleProviderCallback($provider) {
-        //notice we are not doing any validation, you should do it
-
         $user = Socialite::driver($provider)->user();
 
-        // stroing data to our use table and logging them in
-        $data = [
-            'name' => $user->getName(),
-            'email' => $user->getEmail(),
-            'provider' => $provider,
-            'provider_id' => $user->id
-        ];
+        /**
+         * Check user share e-mail
+         */
+        if (is_null($user->getEmail())) {
+            flash('É necessário possuir um e-mail público.', 'danger');
+            return redirect('login');
+        }
 
-        Auth::login(User::findOrCreate($data));
+        $authUser = User::where('email', $user->getEmail())->first();
 
-        //after login redirecting to home page
-        return redirect($this->redirectPath());
+        /**
+         * Check provider
+         */
+        /*
+          if($authUser->provider !== $provider){
+          flash('Você está registrado com outro login.', 'danger');
+          return redirect('login');
+          }
+         */
+
+        /**
+         * Find or create user
+         */
+        $userNewOrCreated = $this->findOrCreateUser($user, $provider);
+
+        /**
+         * Login
+         */
+        Auth::login($userNewOrCreated);
+
+        return redirect($this->redirectTo);
+    }
+
+    /**
+     * 
+     * @param User $user
+     * @param Provider $provider
+     * @return User
+     */
+    public function findOrCreateUser($user, $provider) {
+        /**
+         * Find user
+         */
+        $authUser = User::where('email', $user->getEmail())->first();
+
+        /**
+         * Authenticate with user
+         */
+        if ($authUser) {
+            return $authUser;
+        }
+
+        /**
+         * Create user
+         */
+        return User::create([
+                    'name' => $user->getName(),
+                    'email' => $user->getEmail(),
+                    'provider' => $provider,
+                    'provider_id' => $user->id,
+                    'provider_extra' => (array) $user
+        ]);
     }
 
 }

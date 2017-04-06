@@ -15,7 +15,16 @@ class User extends Authenticatable {
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'provider', 'provider_id',
+        'name', 'email', 'password', 'provider', 'provider_id', 'provider_extra',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'provider_extra' => 'array',
     ];
 
     /**
@@ -26,18 +35,5 @@ class User extends Authenticatable {
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function findOrCreateUser($user, $provider) {
-        $authUser = User::where('provider_id', $user->id)->first();
-        if ($authUser) {
-            return $authUser;
-        }
-        return User::create([
-                    'name' => $user->name,
-                    'email' => $user->email,
-                    'provider' => $provider,
-                    'provider_id' => $user->id
-        ]);
-    }
 
 }

@@ -181,9 +181,9 @@ return [
          * Xtras
          */
         Barryvdh\Debugbar\ServiceProvider::class,
-        GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        GrahamCampbell\Exceptions\ExceptionsServiceProvider::class
     ],
 
     /*
