@@ -11,7 +11,9 @@ Framework Laravel + Bibliotecas para desenvolvimento de aplicação.
 - [x] [Laravel Exceptions](https://github.com/GrahamCampbell/Laravel-Exceptions)
 - [x] [Easy Flash Messages](https://github.com/laracasts/flash)
 - [x] [Socialite](https://github.com/laravel/socialite)
-- 
+- [x] [Laravel Collective - Forms & HTML](https://github.com/LaravelCollective/html)
+
+
 ##### :wrench: [Processo de criação do Skeleton](https://gist.github.com/jrmessias/a25ec7c7885e3ed5ce570d30ae88cc52)
 
 ### Instalação
